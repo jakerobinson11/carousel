@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 300px;
+    height: 200px;
+    vertical-align: bottom;
+}
+#parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#carousel{
+    position: relative;
+    overflow: hidden;
+    border: 1px solid red;
+    width: 300px;
+    height: 200px;
+}
+.moveImage{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+}
+.transEffect{
+    transition: all .5s;
+}
+.fa-caret-right,.fa-caret-left{
+    color: red;
+    font-size: 3rem;
+}
+.divNext,.divPrev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 2;
+}
+.divNext{
+    left: unset;
+    right: 0;
+}
+.slide-right{
+    transform: translateX(100%);
+}
+.slide-left{
+    transform: translateX(-100%);
+}
